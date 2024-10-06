@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Film_Secimi {
+public class filmff {
     public static void main(String[] args) {
         tahminHakki();
     }
@@ -21,7 +21,7 @@ public class Film_Secimi {
         String[] bos = new String[secilenfilm.length()];   // Tahmin edilen harfler için boş bir dizi
         Arrays.fill(bos, "_");                          // İlk başta boşluğu (_) göster.
 
-        char[] harfler =secilenfilm.toCharArray();        // Filmin harflerini tutan dizi
+        char[] harfler = secilenfilm.toCharArray();        // Filmin harflerini tutan dizi
 
         int kalanHakSayisi = tahminHakki;                 // Kalan hakları kontrol etmek için
         int dogruTahminSayisi = 0;
@@ -49,18 +49,15 @@ public class Film_Secimi {
 
             if (harfVarmi) {
                 System.out.println("Doğru tahmin!");
-                dogruTahminSayisi++;
+                dogruTahminSayisi++;  // Toplam doğru tahmin sayısını bir artırıyoruz
             } else {
                 System.out.println("Yanlış tahmin.");
-                yanlisTahminSayisi++;
+                yanlisTahminSayisi++;  // Yanlış tahmin sayısını artırıyoruz
             }
 
-            kalanHakSayisi--;
-
-                System.out.println("Doğru Tahmin Sayısı: "+dogruTahminSayisi);
-                System.out.println("Yanlış Tahmin Sayısı: "+yanlisTahminSayisi);
-
-
+            kalanHakSayisi--;  // Hangi tahmin olursa olsun, hak bir azalır
+            System.out.println("Doğru Tahmin Sayısı: " + dogruTahminSayisi);
+            System.out.println("Yanlış Tahmin Sayısı: " + yanlisTahminSayisi);
 
             // Oyuncu filmi doğru tahmin etti mi?
             String tahminStringi = "";
@@ -84,3 +81,4 @@ public class Film_Secimi {
         }
     }
 }
+
